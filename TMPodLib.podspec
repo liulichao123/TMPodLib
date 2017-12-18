@@ -30,7 +30,7 @@ TODO: 我是一个长长的详细描述.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'TMPodLib/Classes/*'
+  s.source_files = 'TMPodLib/Classes/*.swift'
   
   # s.resource_bundles = {
   #   'TMPodLib' => ['TMPodLib/Assets/*.png']

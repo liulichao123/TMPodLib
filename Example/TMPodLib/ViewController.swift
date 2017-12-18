@@ -12,7 +12,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tipView = TMSharpMenu()
+        let p = Person()
+        let sharpView = TMSharpMenu.init([], TMSharpMenuConfig())
     }
 
     override func didReceiveMemoryWarning() {

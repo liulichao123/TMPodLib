@@ -8,27 +8,27 @@
 
 import UIKit
 import SnapKit
+//对外公开的所有类型前需要 public
+public typealias TMSharpMenuItem = (img: String?, title: String?, block: (() -> Void))?
 
-typealias TMSharpMenuItem = (img: String?, title: String?, block: (() -> Void))?
-
-enum TMDirection {
+public enum TMDirection {
     case up
     case down
 }
 
 //MARK: 配置
-struct TMSharpMenuConfig {
+public struct TMSharpMenuConfig {
     
-    var type = TMDirection.up                //箭头位置，上/下
-    var cornerRadius: CGFloat = 5            //corner
-    var bgAlpha: CGFloat = 0.8825            //please set alpha，not set alpha
-    var color: UIColor = UIColor(red: 56.0/255.0, green:  56.0/255.0, blue:  56.0/255.0, alpha: 1)
+    public var type = TMDirection.up                //箭头位置，上/下
+    public var cornerRadius: CGFloat = 5            //corner
+    public var bgAlpha: CGFloat = 0.8825            //please set alpha，not set alpha
+    public var color: UIColor = UIColor(red: 56.0/255.0, green:  56.0/255.0, blue:  56.0/255.0, alpha: 1)
     
-    var inset: CGFloat = 14.5               //自身的左右距离superview
-    var triangleToBottom: CGFloat = 0       //三角下偏移量
-    var minToLeftRight: CGFloat = 4         //三角距左右最小偏移
-    var triangleWidth: CGFloat = 10         //三角底边宽度
-    var triangleHeight: CGFloat = 4         //三角高度（实际看到的高度可能会因为triangleToBottom 值得存在比设置的小，导致上面有一点空白）
+    public var inset: CGFloat = 14.5               //自身的左右距离superview
+    public var triangleToBottom: CGFloat = 0       //三角下偏移量
+    public var minToLeftRight: CGFloat = 4         //三角距左右最小偏移
+    public var triangleWidth: CGFloat = 10         //三角底边宽度
+    public var triangleHeight: CGFloat = 4         //三角高度（实际看到的高度可能会因为triangleToBottom 值得存在比设置的小，导致上面有一点空白）
     
     var itemH: CGFloat = 44
     var itemW: CGFloat = 125
@@ -37,10 +37,13 @@ struct TMSharpMenuConfig {
     var itemTitleColorH = UIColor.orange//HEXCOLOR(0xFFB544)
     //item图片、分割线调整见底部 item
     
+    public init() {
+        
+    }
 }
 
 //MARK: TMSharpMenu
-class TMSharpMenu: UIView {
+public class TMSharpMenu: UIView {
     
     private var sharp: TMTriangle!
     private var bottomView: UIView!
@@ -53,11 +56,11 @@ class TMSharpMenu: UIView {
     
     var config: TMSharpMenuConfig!
     
-    init(_ items: [TMSharpMenuItem], _ config: TMSharpMenuConfig = TMSharpMenuConfig()) {
+    public init(_ items: [TMSharpMenuItem], _ config: TMSharpMenuConfig) {
         self.items = items
         self.config = config
         super.init(frame: CGRect(x: 0, y: 0, width: config.itemW, height: config.itemH * CGFloat(items.count) + config.triangleHeight))
-    
+        
         orginFrame = frame
         backgroundColor = UIColor.clear
         
@@ -92,10 +95,10 @@ class TMSharpMenu: UIView {
     }
 
     private override init(frame: CGRect) {super.init(frame: frame)}
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     private func addItem(image: String?, title: String?, block: (() -> Void)?)  {
         itemButtons.forEach { (item) in
             item.showLine = true

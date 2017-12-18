@@ -18,7 +18,7 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "TMPodLib/Classes/*",
+  "source_files": "TMPodLib/Classes/*.swift",
   "dependencies": {
     "SnapKit": [
       "~> 4.0.0"
