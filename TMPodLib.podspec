@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TMPodLib'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = '我是一个简短的描述'
 
 # This description is used to generate tags and improve search results.
