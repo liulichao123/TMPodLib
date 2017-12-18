@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TMPodLib_Example' do
+  pod 'TMPodLib', :path => '../'
+
+  target 'TMPodLib_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
