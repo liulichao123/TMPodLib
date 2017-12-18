@@ -1,8 +1,8 @@
 {
   "name": "TMPodLib",
-  "version": "0.1.0",
-  "summary": "A short description of TMPodLib.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "1.0.0",
+  "summary": "我是一个简短的描述",
+  "description": "TODO: 我是一个长长的详细描述.",
   "homepage": "https://github.com/liulichao123/TMPodLib",
   "license": {
     "type": "MIT",
@@ -13,10 +13,15 @@
   },
   "source": {
     "git": "https://github.com/liulichao123/TMPodLib.git",
-    "tag": "0.1.0"
+    "tag": "1.0.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "TMPodLib/Classes/**/*"
+  "source_files": "TMPodLib/Classes/*",
+  "dependencies": {
+    "SnapKit": [
+      "~> 4.0.0"
+    ]
+  }
 }

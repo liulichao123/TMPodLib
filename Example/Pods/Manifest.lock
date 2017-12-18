@@ -1,5 +1,7 @@
 PODS:
-  - TMPodLib (0.1.0)
+  - SnapKit (4.0.0)
+  - TMPodLib (1.0.0):
+    - SnapKit (~> 4.0.0)
 
 DEPENDENCIES:
   - TMPodLib (from `../`)
@@ -9,7 +11,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  TMPodLib: 92243640ad94198024b19e40b8064956ce6331e7
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  TMPodLib: 3272b115c9a11205eda32b09bf6ad7dcc6197fe1
 
 PODFILE CHECKSUM: 71400ee3edd354017d4724ebd60f51773e8c182c
 
